@@ -1,0 +1,54 @@
+/* styles/footer.css or include in globals.css */
+.footer-section {
+    background-color: #f8f9fa;
+    color: #212529;
+  }
+  
+  .footer-title {
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+  }
+  
+  .footer-links li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-links a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-links a:hover {
+    color: #0d6efd;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .social-links a {
+    color: #6c757d;
+    font-size: 1.25rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-links a:hover {
+    color: #0d6efd;
+  }
+  
+  .footer-bottom {
+    background-color: #e9ecef;
+    font-size: 0.875rem;
+  }
+  
+  .legal-links a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .legal-links a:hover {
+    color: #0d6efd;
+  }

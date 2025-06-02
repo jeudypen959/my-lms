@@ -1,0 +1,1368 @@
+/* Define root font family variables */
+:root {
+  --background: #F1F5F9;
+  --foreground: #171717;
+  --font-default: 'Acme', sans-serif;
+  --font-crimson: 'Crimson Pro', serif;
+  --font-carter: 'Carter One', cursive;
+  --font-athiti: 'Athiti', sans-serif;
+  --font-livvic: 'Livvic', sans-serif;
+  --font-darker: 'Darker Grotesque', sans-serif;
+  --font-gupter: 'Gupter', serif;
+  --font-glegoo: 'Glegoo', serif;
+  --font-yrsa: 'Yrsa', serif;
+}
+
+/* General body styling */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-default);
+  font-weight: 400; /* Default weight */
+}
+
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff !important;
+}
+
+/* General text elements in dark mode */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+/* .dark-mode i, */
+.dark-mode p,
+.dark-mode a {
+  color: #ffffff !important;
+}
+
+/* Add or update this in your CSS */
+.dark-mode .nav-link:focus h2 {
+  color: #2c3e50 !important;
+}
+
+/* Ensure inline styles on h2 don’t override */
+.dark-mode .nav-link:focus h2[style] {
+  color: #2c3e50 !important;
+}
+
+/* Optional: Style the nav-link itself when focused for visibility */
+.dark-mode .nav-link:focus {
+  outline: none; /* Remove default focus outline if desired */
+}
+
+.dark-mode i {
+  color: #2c3e50;
+}
+
+.dark-mode span[style] {
+  color: #2c3e50;
+}
+
+
+.dark-mode h6 {
+  color: #ffffff !important;
+}
+
+.dark-mode small,
+.dark-mode h6[style]{
+  color: #2c3e50;
+}
+
+.dark-mode p.txt-sub[style] {
+  color: #fff;
+}
+
+.dark-mode h2.lag[style] {
+  color: #2c3e50;
+}
+
+.dark-mode div[style] {
+  color: #fff;
+}
+
+.dark-mode small.text-success {
+  color: "#198754";
+}
+
+/* Specific overrides for inline styles or classes in dark mode */
+.dark-mode h5[style],
+.dark-mode p[style],
+.dark-mode small[style] {
+  color: #2c3e50 !important;
+}
+
+/* Override any element with inline styles in dark mode */
+.dark-mode [style] {
+  color: #ffffff !important;
+}
+
+/* Footer-specific styles */
+footer {
+  background-color: #fff; /* White background in light mode */
+  color: #2c3e50; /* Default text color in light mode */
+}
+
+.dark-mode footer {
+  background-color: #2c2c2c !important; /* Dark background in dark mode */
+  color: #ffffff !important; /* White text in dark mode */
+}
+
+/* Ensure footer-specific text elements turn white in dark mode */
+.dark-mode footer .text-muted,
+.dark-mode footer a,
+.dark-mode footer span,
+.dark-mode footer h5,
+.dark-mode footer p,
+.dark-mode footer small {
+  color: #ffffff !important;
+}
+
+.dark-mode footer .opt {
+  color: "#2c3e50";
+}
+
+.dark-mode footer a.text-muted:hover {
+  color: #f47834 !important; /* Hover color remains orange */
+}
+
+.dark-mode footer .btn-primary {
+  background-color: #f47834 !important; /* Keep button color consistent */
+  border-color: #f47834 !important;
+}
+
+.dark-mode footer .btn-primary:hover {
+  background-color: #e06620 !important;
+  border-color: #e06620 !important;
+}
+
+/* Example usage of fonts */
+h1 {
+  font-family: var(--font-default);
+  font-weight: 600;
+}
+
+h2 {
+  font-family: var(--font-carter);
+  font-weight: 400;
+}
+
+h3 {
+  font-family: var(--font-athiti);
+  font-weight: 300;
+}
+
+h5 {
+  font-family: var(--font-crimson);
+  font-weight: 400;
+}
+
+ul {
+  font-family: var(--font-glegoo);
+  font-weight: 200;
+}
+
+p {
+  font-family: var(--font-livvic);
+  font-weight: 200;
+}
+
+button {
+  font-family: var(--font-darker);
+  font-weight: 400;
+}
+
+a {
+  font-family: var(--font-crimson);
+  font-weight: 400;
+}
+
+/* Font weight usage for specific elements */
+h1, h2, h3 {
+  font-weight: 600; /* Bold headings */
+}
+
+h2 {
+  font-weight: 200; /* Light heading */
+}
+
+p {
+  font-weight: 100; /* Very light text */
+}
+
+/* Style for links */
+a {
+  font-family: var(--font-yrsa);
+  font-weight: 400; /* Default weight for links */
+}
+
+.navbar {
+  font-family: var(--font-gupter);
+  font-weight: 600;
+}
+
+.footer {
+  font-family: var(--font-glegoo);
+  font-weight: 400;
+}
+
+blockquote {
+  font-family: var(--font-yrsa);
+  font-weight: 100;
+}
+
+.search-input {
+  border-radius: 15px;
+  border: 2px solid #8d8d8d;
+  font-size: 14px;
+  font-family: 'Livvic', sans-serif;
+  font-weight: 400;
+  color: #2c3e50;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Change the placeholder color to gray */
+.search-input::placeholder {
+  color: #a0a0a0; /* Correct placeholder color */
+  opacity: 1;
+  font-size: 14px; /* Set the correct font size */
+}
+
+.search-input:focus,
+.search-input:hover {
+  border-color: #2c3e50; /* Change border color on hover/focus */
+}
+
+.search-btn {
+  border-radius: 10px;
+  background-color: #2c3e50;
+  color: white;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  font-family: 'Crimson Pro', serif;
+}
+
+.search-btn:hover {
+  border-color: #6ca3d6;
+  background-color: #6ca3d6; /* Darker shade on hover */
+  color: white; /* Ensures text remains white */
+}
+
+/* Navbar link styling */
+.navbar-nav .nav-link {
+  position: relative;
+  color: #2c3e50;
+  font-size: 18px;
+  font-family: 'Crimson Pro', serif;
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link.active-link {
+  font-weight: bold;
+  color: #f47834 !important;
+  border-bottom: 3px solid #f47834 !important;
+  padding-bottom: 8px !important;
+}
+
+/* Hover effect with border-bottom */
+.navbar-nav .nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 3px;
+  background-color: #F47834; /* Customize hover color */
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  transform: translateX(-50%);
+}
+
+/* Expand border-bottom on hover */
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #F47834; /* Customize text hover color */
+}
+
+/* Add to your global CSS file or <style jsx> */
+.position-fixed {
+  top: 0;
+  left: 0;
+  z-index: 1030; /* Ensures the header is above other elements */
+}
+
+main {
+  padding-top: 0px; /* Ensure content starts below the fixed header */
+}
+
+.product-card {
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+  background-color: rgb(44, 62, 80);
+  border-radius: 5px;
+  height: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-indicators {
+  bottom: -50px;
+}
+
+.carousel-indicators button {
+  background-color: #999;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+.carousel-indicators .active {
+  background-color: #333;
+  height: 10px;
+}
+
+/* Make carousel mobile-responsive */
+@media (max-width: 768px) {
+  .carousel-item .row .col-md-3 {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-item .row .col-md-3 {
+    width: 100%;
+  }
+}
+
+.theme-switch-wrapper div {
+  font-size: 1.5rem; /* Change icon size */
+  color: #2c3e50; /* Icon color */
+  transition: color 0.3s ease;
+}
+
+.theme-switch-wrapper div:hover {
+  color: #f47834; /* Icon color change on hover */
+}
+
+[data-theme="light"] {
+  background-color: #fff;
+  color: #000;
+}
+
+[data-theme="dark"] {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.custom-pagination {
+  /* Optional: Customize the pagination container if needed */
+}
+
+.custom-page-link {
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #f8f9fa; /* Default background */
+  color: #212529; /* Default text color */
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.custom-page-link:hover:not(.disabled .custom-page-link) {
+  background-color: #ffc548; /* Blue background on hover */
+  border-color: #ffc548;
+  color: #fff; /* White text on hover */
+  transform: translateY(-3px); /* Slight upward movement */
+}
+
+/* Active state */
+.active .custom-page-link {
+  background-color: #f3894b; /* Green background for active */
+  color: #fff; /* White text for active */
+  transform: scale(1.1); /* Scale up slightly */
+  border-color: #f3894b;
+}
+
+/* Disabled state */
+.disabled .custom-page-link {
+  background-color: #e9ecef; /* Grayed-out background */
+  color: #6c757d; /* Grayed-out text */
+  cursor: not-allowed;
+  transform: none; /* No animation */
+}
+
+.custom-tab-link {
+  font-family: 'Acme', sans-serif;
+  font-size: 20px;
+  color: #2c3e50; /* Default color (Bootstrap gray) */
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+/* Hover state */
+.custom-tab-link:hover {
+  color: #ffc548; /* Orange on hover */
+}
+
+/* Active state */
+.custom-tab-link.active {
+  color: #f3894b; /* Orange for active */
+}
+
+.custom-input:focus {
+  border-color: #F47832 !important;
+  box-shadow: 0 0 5px rgba(255, 165, 0, 0.75) !important;
+  outline: none;
+}
+
+.custom-input {
+  border: 1px solid #ccc; /* Default border */
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-input::placeholder {
+  opacity: 0.7; /* Ensure placeholder remains inside */
+}
+
+.custom-input:focus::placeholder {
+  color: transparent; /* Hide placeholder on focus */
+}
+
+.custom-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-7px); /* Slight lift on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.055); /* Add shadow on hover */
+}
+
+.service-bg {
+  background-color: #fff; /* Light background */
+  min-height: 90vh; /* Full height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Service Card Styles */
+.service-card {
+  border: 2px solid #007bff; /* Blue border */
+  border-radius: 15px; /* Rounded corners */
+  padding: 20px; /* Padding inside */
+  background: white; /* White background */
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-7px);
+  border: 4px solid #f3894b;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.062); /* Shadow appears on hover */
+}
+
+.form-control::placeholder {
+  color: gray; /* Change to your preferred color */
+  opacity: 1; /* Ensures the color is fully visible */
+}
+
+.custom-nav-tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  flex-wrap: nowrap;
+}
+
+.custom-nav-tabs .nav-item {
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin: 10px;
+}
+
+.custom-nav-tabs .nav-link {
+  border: 1px solid #dee2e6;
+  border-radius: 15px;
+  padding: 10px 20px;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+  width: 100%;
+  display: block;
+}
+
+.custom-nav-tabs .nav-link.active {
+  background-color: #2c3e50;
+  color: white;
+  border-color: #2c3e50;
+}
+
+.custom-nav-tabs .nav-link:hover:not(.active) {
+  background-color: #819ab3;
+  color: white;
+  border-color: #819ab3;
+}
+
+.custom-nav-tabs .nav-link.text-center {
+  text-align: center !important; /* Force centering if needed */
+}
+
+@media (max-width: 576px) {
+  .custom-nav-tabs .nav-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.card {
+  border: none;
+}
+
+.form-control {
+  border-radius: 15px;
+  height: 20px;
+  font-size: 14px;
+}
+
+.form-control.custom-input {
+  border-radius: 15px;
+  padding: 10px 15px;
+  font-size: 14px;
+}
+
+.form-floating label {
+  color: #6c757d;
+}
+
+.btn-primary {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  border-radius: 12px;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1c2b3a;
+  border-color: #1c2b3a;
+}
+
+footer {
+  font-size: 14px;
+  color: #2c3e50;
+}
+
+.modal h2 {
+  font-size: 18px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.modal h2.success {
+  color: #2ecc71;
+}
+
+.modal h2.error {
+  color: #e74c3c;
+}
+
+.modal h2.loading {
+  color: #34495e;
+}
+
+.form-floating .btn {
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.form-floating .btn:hover {
+  background: rgba(44, 62, 80, 0.8);
+}
+
+.custom-table th {
+  background-color: #f3894b;
+  color: #fff;
+}
+
+/* Base style for tab buttons */
+.custom-tab-buttons {
+    background-color: #f5f5f5; /* Default background */
+    color: #2c3e50; /* Default text color */
+    border: none; /* Remove default border if needed */
+    padding: 10px 20px; /* Adjust padding as needed */
+    transition: all 0.3s ease; /* Smooth transition for hover/active */
+    font-family: 'Acme', sans-serif;
+}
+
+/* Hover state */
+.custom-tab-buttons:hover {
+    background-color: #f47832; /* Lighter gray on hover */
+    color: #fff; /* Orange text on hover */
+    font-family: 'Acme', sans-serif;
+}
+
+/* Active state */
+.nav-link.custom-tab-button.active {
+  background-color: #f47832 !important;
+  color: #ffffff !important;
+}
+
+/* Optional: Focus state to remove outline if needed */
+.custom-tab-buttons:focus {
+  background-color: #f47832;
+  color: #fff;
+    outline: none;
+}
+
+/* Ensure your CSS is loaded AFTER Bootstrap */
+.nav-tabs .nav-item .custom-tab-button {
+  background-color: #f5f5f5;
+  color: #2c3e50;
+  border: none;
+  padding: 10px 20px;
+  font-family: 'Acme', sans-serif;
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+.nav-tabs .nav-item .custom-tab-button:hover {
+  background-color: #e0e0e0;
+  color: #2c3e50;
+  font-family: 'Acme', sans-serif;
+}
+
+.nav-tabs .nav-item .custom-tab-button.active {
+  background-color: #f47832 !important; /* Force override */
+  color: #ffffff !important;
+  font-size: 18px;
+  border: none; /* Remove any Bootstrap border if present */
+}
+
+.nav-pills .nav-link.active {
+  background-color: #2c3e50 !important;
+  color: #fff !important;
+  border-radius: 10px;
+}
+
+.error-page {
+  background: linear-gradient(135deg, var(--background) 0%, var(--accent) 100%);
+}
+
+.error-heading {
+  font-size: 8rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error-message {
+  font-size: 2rem;
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.error-subtitle {
+  color: var(--muted-foreground);
+  font-size: 1.2rem;
+}
+
+.search-container {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.btn-search {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .error-heading {
+    font-size: 6rem;
+  }
+  
+  .error-message {
+    font-size: 1.5rem;
+  }
+  
+  .error-subtitle {
+    font-size: 1rem;
+  }
+  
+  .action-buttons .btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+.comments-section {
+  --primary: "#CFE2FF";
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #111111;
+  --accent: #f0f0f0;
+  --accent-foreground: #111111;
+  --background: #ffffff;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --border: #e5e5e5;
+  --input: #f5f5f5;
+  --ring: "#CFE2FF";
+}
+
+.comments-section .card {
+  border-color: var(--border);
+  background-color: var(--card);
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  transition: all 0.3s ease;
+}
+
+.comments-section .card:hover {
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); */
+}
+
+.comments-section .form-control {
+  background-color: var(--input);
+  border-color: var(--border);
+}
+
+.comments-section .form-control:focus {
+  box-shadow: 0 0 0 2px "#CFE2FF";
+  border-color: "#CFE2FF";
+}
+
+.comments-section .btn-primary {
+  background-color: "#CFE2FF";
+  border-color: "#CFE2FF";
+  color: var(--primary-foreground);
+}
+
+.comments-section .btn-primary:hover {
+  background-color: "#CFE2FF";
+  filter: brightness(90%);
+}
+
+.comments-section .nested-replies {
+  margin-left: 3rem;
+  border-left: 2px solid var(--border);
+  padding-left: 1rem;
+}
+
+.comments-section .btn-link {
+  text-decoration: none;
+  padding: 0;
+}
+
+.comments-section .btn-link:hover {
+  color: var(--primary) !important;
+}
+
+@media (max-width: 768px) {
+  .comments-section .nested-replies {
+    margin-left: 1rem;
+  }
+}
+
+.custom-dark-mode-toggle {
+  width: 100px; 
+  height: 0px;
+}
+
+.custom-dark-mode-toggle .form-check-input {
+  width: 40px; 
+  height: 20px; 
+}
+
+.custom-dark-mode-toggle .form-check-label {
+  line-height: 30px;
+  padding-left: 7px;
+}
+
+/* Dark mode styling */
+.dark-mode .nav-link.active h2,
+.dark-mode h2.nav-link.active {
+  color: #2c3e50 !important;
+}
+
+/* Dropdown menu styling with forced specificity */
+
+/* Light mode hover effect - forcing specificity with !important */
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+  color: #ffffff !important; /* White text on hover */
+  background-color: #2c3e50 !important; /* Dark background on hover */
+}
+
+/* Dark mode base styling */
+body.dark-mode .dropdown-menu {
+  background-color: #2c3e50 !important;
+}
+
+body.dark-mode .dropdown-menu .dropdown-item {
+  color: #ffffff !important; /* White text in dark mode */
+}
+
+/* Dark mode hover effect - forcing specificity */
+body.dark-mode .dropdown-menu .dropdown-item:hover,
+body.dark-mode .dropdown-menu .dropdown-item:focus {
+  color: #2c3e50 !important; /* Dark text on hover in dark mode */
+  background-color: #ffffff !important; /* White background on hover in dark mode */
+}
+
+/* Also target Link components specifically in case they have different CSS classes */
+body.dark-mode .dropdown-menu a:hover,
+body.dark-mode .dropdown-menu a:focus,
+body.dark-mode .dropdown-menu Link:hover,
+body.dark-mode .dropdown-menu Link:focus {
+  color: #2c3e50 !important;
+  background-color: #ffffff !important;
+}
+
+/* Handle any icon styling */
+body.dark-mode .dropdown-menu .dropdown-item:hover i,
+body.dark-mode .dropdown-menu .dropdown-item:focus i {
+  color: #2c3e50 !important;
+}
+
+.dark-mode .category-btn {
+  color: #fff;
+}
+
+.dark-mode .category-btn.selected {
+  background-color: #fff;
+  border-color: #fff;
+  color: #2c3e50; /* Updated to #2c3e50 as requested */
+}
+
+.dark-mode .category-btn:not(.selected):hover {
+  background-color: gray;
+  color: #fff;
+  border: 1px solid #b2babb;
+}
+
+/* Category button base styles (Light Mode) */
+.category-btn {
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background-color: transparent;
+  border: 1px solid #b2babb;
+  color: #2c3e50;
+}
+
+.category-btn.selected {
+  background-color: #2c3e50; /* Changed from #2c3e50 to match dark mode and request */
+  border-color: #2c3e50;
+  color: #fff; /* Updated to #2c3e50 as requested */
+}
+
+.category-btn:not(.selected):hover {
+  background-color: gray;
+  color: #2c3e50;
+}
+
+/* Pagination Button Styles */
+.page-number-btn {
+  margin: 0 0.25rem;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+/* Default state */
+.page-number-btn {
+  background-color: transparent;
+  color: #2c3e50;
+}
+
+/* Active state */
+.page-number-btn.active {
+  background-color: #2c3e50;
+  color: white;
+}
+
+/* Hover state */
+.page-number-btn:not(.active):hover {
+  background-color: #F1F5F9;
+  color: #2c3e50;
+}
+
+/* Page number button styles in Dark Mode */
+.dark-mode .page-number-btn {
+  background-color: transparent;
+  color: #fff; /* White text in dark mode */
+  border: none;
+}
+
+.dark-mode .page-number-btn:hover:not(.active) {
+  background-color: gray; /* Consistent with other buttons */
+  color: #2c3e50;
+}
+
+.dark-mode .page-number-btn.active {
+  background-color: #fff; /* White background for active in dark mode */
+  color: #2c3e50; /* Dark text for contrast */
+}
+
+/* Dark mode specific overrides */
+[data-theme='dark'] .page-number-btn {
+  color: #2c3e50;
+}
+
+[data-theme='dark'] .page-number-btn.active {
+  background-color: #2c3e50;
+  color: white;
+}
+
+[data-theme='dark'] .page-number-btn:not(.active):hover {
+  background-color: #ffffff;
+  color: #2c3e50;
+}
+
+
+/* Style for ellipsis */
+.pagination-ellipsis {
+  color: #2c3e50;
+  margin: 0 8px; /* Matches mx-2 */
+}
+
+.dark-mode .pagination-ellipsis {
+  color: #fff; /* White in dark mode */
+}
+
+
+/* Pagination button base styles (Light Mode) */
+.pagination-btn {
+  background-color: transparent;
+  color: #2c3e50;
+  border: none !important; /* Explicitly set no border with higher specificity */
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.pagination-btn:hover:not(:disabled) {
+  background-color: #F1F5F9;
+  color: #2c3e50;
+  border: none !important; /* Ensure no border on hover */
+}
+
+.pagination-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  border: none !important; /* Ensure no border when disabled */
+}
+
+/* Pagination button styles in Dark Mode */
+.dark-mode .pagination-btn {
+  background-color: transparent;
+  color: #fff;
+  border: none !important; /* Explicitly set no border in dark mode */
+}
+
+.dark-mode .pagination-btn:hover:not(:disabled) {
+  background-color: gray;
+  color: #2c3e50;
+  border: none !important; /* Ensure no border on hover in dark mode */
+}
+
+[data-theme='dark'] .pagination-btn:hover:not(:disabled) {
+  background-color: #ffffff;
+}
+
+.contact-info {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: var(--primary-foreground);
+  min-height: 50vh;
+  border-radius: 35;
+}
+
+.contact-form {
+  background: var(--card);
+  min-height: 100vh;
+  border-radius: 35;
+}
+
+.form-control {
+  border: 1px solid #b2babb;
+  border-radius: 10;
+  height: 25;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-radius: 10;
+  border-color: var(--ring);
+  box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.1);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  border-radius: 10;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent);
+  transform: translateY(-1px);
+}
+
+.social-icons a {
+  color: var(--primary-foreground);
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+  opacity: 0.8;
+  transform: translateY(-2px);
+}
+
+.form-floating label {
+  color: var(--muted-foreground);
+}
+
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+  color: var(--primary);
+}
+
+.invalid-feedback {
+  color: var(--destructive);
+}
+
+.map-container {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 991.98px) {
+  .contact-info,
+  .contact-form {
+    min-height: auto;
+  }
+}
+
+/* Popular posts line */
+.popular-posts-line {
+  border-left: 5px solid #2c3e50;
+  /* height: 25px; */
+  margin-right: 10px;
+  border-radius: 15px;
+}
+
+body.dark-mode .popular-posts-line {
+  border-left: 5px solid #ffffff;
+}
+
+/* Carousel control buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    height: 50px;
+    width: 50px;
+    border-radius: 15px;
+    background-color: #b2babb; /* rgb(44, 62, 80) */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-150%);
+}
+
+.carousel-control-prev {
+    left: -25px;
+}
+
+.carousel-control-next {
+    right: -25px;
+}
+
+/* Dark mode for carousel controls */
+body.dark-mode .carousel-control-prev,
+body.dark-mode .carousel-control-next {
+    background-color: #ffffff !important; /* White in dark mode, adjust if needed */
+}
+
+/* Ensure icons are visible in both modes */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%); /* Makes the icon white in light mode against #2c3e50 */
+}
+
+body.dark-mode .carousel-control-prev-icon,
+body.dark-mode .carousel-control-next-icon {
+    color: #ffffff !important;
+}
+
+/* View toggle buttons */
+.view-toggle-btn {
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+/* Light mode styles (when body does not have .dark-mode) */
+body:not(.dark-mode) .view-toggle-btn {
+  background: none !important;
+  border: 0px solid #2c3e50;
+}
+
+body:not(.dark-mode) .view-toggle-btn svg {
+  color: #2c3e50 !important;
+}
+
+body:not(.dark-mode) .view-toggle-btn:hover {
+  background-color: #2c3e50 !important;
+  border: none !important;
+}
+
+body:not(.dark-mode) .view-toggle-btn:hover svg {
+  color: #fff !important;
+}
+
+body:not(.dark-mode) .view-toggle-btn.active,
+body:not(.dark-mode) .view-toggle-btn:focus {
+  background-color: #2c3e50 !important;
+  border: 2px solid #2c3e50 !important;
+  outline: none !important;
+}
+
+body:not(.dark-mode) .view-toggle-btn.active svg,
+body:not(.dark-mode) .view-toggle-btn:focus svg {
+  color: #ffffff !important;
+}
+
+/* Dark mode styles (when body has .dark-mode) */
+body.dark-mode .view-toggle-btn {
+  background: none !important;
+  border: none !important;
+}
+
+body.dark-mode .view-toggle-btn svg {
+  color: #ffffff !important;
+}
+
+body.dark-mode .view-toggle-btn:hover {
+  background: #fff !important;
+  border: 2px solid #ffffff !important;
+  border: none !important;
+}
+
+body.dark-mode .view-toggle-btn:hover svg {
+  color: #2c3e50 !important;
+  background-color: #fff;
+}
+
+body.dark-mode .view-toggle-btn.active,
+body.dark-mode .view-toggle-btn:focus {
+  background: #fff !important;
+  border: 2px solid #ffffff !important;
+  outline: none !important;
+}
+
+body.dark-mode .view-toggle-btn.active svg,
+body.dark-mode .view-toggle-btn:focus svg {
+  color: #2c3e50 !important;
+}
+
+body.dark-mode .view-toggle-btn:focus {
+  box-shadow: none !important;
+}
+
+/* Other component-specific styles */
+body:not(.dark-mode) .container {
+  color: #111111;
+}
+
+body.dark-mode .container {
+  color: #ffffff;
+}
+
+.category-btn {
+  border-radius: 15px;
+  padding: 8px 20px;
+  background-color: #f5f5f5;
+  color: #2c3e50;
+  border: 1px solid #b2babb;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .category-btn {
+  background-color: transparent;
+  color: #ffffff;
+}
+
+.category-btn:hover {
+  background-color: #0070f3;
+  color: #ffffff;
+}
+
+body.dark-mode .category-btn:hover {
+  background-color: #66bfff;
+}
+
+.category-btn.selected {
+  background-color: #2c3e50;
+  color: #ffffff;
+}
+
+body.dark-mode .category-btn.selected {
+  background-color: #fff;
+}
+
+.pagination-btn {
+  border-radius: 10px;
+  padding: 5px 15px;
+  color: #2c3e50;
+  border-color: #bdbdbd;
+}
+
+body.dark-mode .pagination-btn {
+  color: #ffffff;
+  border-color: #495057;
+}
+
+.pagination-btn:hover {
+  background-color: #f5f5f5;
+  border-color: #0070f3;
+}
+
+body.dark-mode .pagination-btn:hover {
+  background-color: #495057;
+  border-color: #66bfff;
+}
+
+.page-number-btn {
+  border-radius: 25%;
+  width: 35px;
+  height: 35px;
+  margin: 0 5px;
+  color: #2c3e50;
+  border-color: #bdbdbd;
+}
+
+body.dark-mode .page-number-btn {
+  color: #ffffff;
+  border-color: #495057;
+}
+
+.page-number-btn.active {
+  background-color: #2c3e50;
+  color: #ffffff;
+  border-color: #2c3e50;
+}
+
+body.dark-mode .page-number-btn.active {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.pagination-ellipsis {
+  margin: 0 10px;
+  color: #6c757d;
+}
+
+body.dark-mode .pagination-ellipsis {
+  color: #adb5bd;
+}
+
+.search-btn {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  color: #ffffff;
+}
+
+.search-btn-login:hover {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+  color: #ffffff;
+}
+
+body.dark-mode .search-btn {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+}
+
+body.dark-mode .search-btn-login {
+  background-color: transparent;
+  /* border: 1px solid #fff; */
+  color: #fff !important;
+}
+
+body.dark-mode .search-btn-login:hover {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #2c3e50 !important;
+}
+
+.search-btn:hover {
+  background-color: #00a8ff;
+  border-color: #00a8ff;
+}
+
+body.dark-mode .search-btn:hover {
+  background-color: #66bfff;
+  border-color: #66bfff;
+}
+
+/* Divider line */
+.divider-line {
+  background-color: #2c3e50;
+  height: 2px;
+  width: 5%;
+  margin: 0 auto 20px auto;
+}
+
+body.dark-mode .divider-line {
+  background-color: #ffffff;
+}
+
+/* Post meta styling */
+.post-meta {
+  color: #2c3e50; /* Light mode color */
+}
+
+body.dark-mode .post-meta {
+  color: #ffffff; /* Dark mode color */
+}
+
+.post-meta i {
+  color: #2c3e50; /* Light mode color for icons */
+}
+
+body.dark-mode .post-meta i {
+  color: #ffffff; /* Dark mode color for icons */
+}
+
+/* Tags badge styling */
+.badge {
+  font-size: 16px;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: #2c3e50;
+  border: 1px solid #2c3e505b; /* Light mode border with slight transparency */
+}
+
+body.dark-mode .badge {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid #ffffff; /* Dark mode border */
+}
